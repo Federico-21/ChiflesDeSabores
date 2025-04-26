@@ -88,6 +88,10 @@
         .contacto a:hover {
             background: #e65100;
         }
+        .card.seleccionado {
+    border: 3px solid #ff9800;
+    box-shadow: 0 0 10px #ff9800;
+        }
     </style>
 </head>
 <body>
@@ -148,8 +152,45 @@
     </section>
 
     <div class="contacto">
-        <a href="https://wa.me/903432740">¡Haz tu pedido!</a>
+        <a id="pedidoBtn" href="#" target="_blank">¡Haz tu pedido!</a>
     </div>
+    
 
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const pedidoBtn = document.getElementById('pedidoBtn');
+        const telefonoWhatsApp = '903432740'; // Tu número sin espacios
+    
+        let saboresSeleccionados = [];
+    
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const sabor = card.querySelector('h2').textContent;
+    
+                card.classList.toggle('seleccionado');
+    
+                if (card.classList.contains('seleccionado')) {
+                    saboresSeleccionados.push(sabor);
+                } else {
+                    saboresSeleccionados = saboresSeleccionados.filter(item => item !== sabor);
+                }
+            });
+        });
+    
+        pedidoBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que el enlace se active de inmediato
+    
+            if (saboresSeleccionados.length === 0) {
+                alert('Por favor, selecciona al menos un chifle para hacer tu pedido.');
+                return;
+            }
+    
+            const mensaje = `¡Hola! Quisiera pedir los siguientes chifles: %0A- ${saboresSeleccionados.join('%0A- ')}`;
+            const url = `https://wa.me/${telefonoWhatsApp}?text=${mensaje}`;
+    
+            window.open(url, '_blank');
+        });
+    </script>
+    
 </body>
 </html>
