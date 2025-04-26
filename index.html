@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chifles Deliciosos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #fff8e1;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ff9800;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff6f00;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .contacto {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contacto a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .contacto a:hover {
+            background: #e65100;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chifles Deliciosos</h1>
+        <p>¡Prueba nuestros sabores únicos!</p>
+    </header>
+
+    <section class="grid">
+        <div class="card">
+            <img src="Clechedetigre.jpeg" alt="Chifle de Leche de Tigre">
+            <div class="card-content">
+                <h2>Leche de Tigre</h2>
+                <p>Explosión de sabor marino en cada bocado.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="chifle-cecina.jpg" alt="Chifle de Cecina">
+            <div class="card-content">
+                <h2>Cecina</h2>
+                <p>El clásico sabor ahumado de la selva peruana.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Ctocino.jpeg" alt="Chifle de Tocino">
+            <div class="card-content">
+                <h2>Tocino</h2>
+                <p>Crujiente y jugoso, ¡una delicia irresistible!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="chifle-pollo-brasa.jpg" alt="Chifle de Pollo a la Brasa">
+            <div class="card-content">
+                <h2>Pollo a la Brasa</h2>
+                <p>El auténtico sabor peruano en cada mordida.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Cpizza.jpeg" alt="Chifle de Pizza">
+            <div class="card-content">
+                <h2>Pizza</h2>
+                <p>Todo el sabor italiano en un chifle peruano.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Cceviche.jpeg" alt="Chifle de Ceviche">
+            <div class="card-content">
+                <h2>Ceviche</h2>
+                <p>Refrescante y cítrico, ¡ideal para cualquier momento!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="contacto">
+        <a href="https://wa.me/903432740">¡Haz tu pedido!</a>
+    </div>
+
+</body>
+</html>
